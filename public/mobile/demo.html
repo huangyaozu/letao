@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <style>
+    .father {
+      width: 200px;
+      height: 200px;
+      background-color: blue;
+      position: relative;
+    }
+    .son {
+      position: absolute;
+      background-color: pink;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+    }
+    /*
+      如果当前元素设置了宽高, 同时设置 left和right, 听 left 的
+                            同时设置 top 和 bottom, 听 top 的
+
+      如果当前元素没有设置宽高, 又同时设置了 left 和 right, 会将盒子拉伸
+    */
+  </style>
+</head>
+<body>
+
+<div class="father">
+  <div class="son"></div>
+</div>
+
+</body>
+</html>

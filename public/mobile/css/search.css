@@ -1,0 +1,27 @@
+/* 搜索历史 */
+.lt_history {
+  padding: 10px;
+  font-size: 12px;
+  color: #666;
+}
+.lt_history .title {
+  height: 30px;
+  line-height: 30px;
+}
+.lt_history .content {
+  border: 1px dashed red;
+}
+.lt_history .content li {
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px dashed red;
+}
+.lt_history .content li:last-child {
+  border-bottom: none;
+}
+.lt_history .content li a {
+  padding: 0 10px;
+}
+.lt_history .content li i {
+  line-height: 30px;
+}

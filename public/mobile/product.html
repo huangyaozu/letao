@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>乐淘商城</title>
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <!-- 引入字体图标库的css -->
+  <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+  <link rel="stylesheet" href="./lib/mui/css/mui.css">
+  <link rel="stylesheet" href="./css/common.css">
+  <link rel="stylesheet" href="./css/product.css">
+  <link rel="icon" href="favicon.ico">
+</head>
+<body>
+<!--<span class="fa fa-pause"></span>-->
+<!--<span class="mui-icon mui-icon-camera"></span>-->
+
+<!-- 全屏容器 -->
+<div class="lt_container">
+
+  <!-- 乐淘头部 -->
+  <div class="lt_header">
+    <!-- 点击 a 标签, 返回上一页 javascript:history.go(-1); -->
+    <a href="javascript:history.go(-1);" class="icon_left"><i class="mui-icon mui-icon-back"></i></a>
+    <h3>商品详情</h3>
+    <!-- 页面重新刷新 -->
+    <!-- location.reload() -->
+    <a href="javascript:location.reload();" class="icon_right"><i class="mui-icon mui-icon-reload"></i></a>
+  </div>
+
+  <!-- 乐淘主体 -->
+  <div class="lt_main">
+    <div class="mui-scroll-wrapper">
+      <div class="mui-scroll">
+        <!-- 挖个巨坑 -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 前往购物车 -->
+  <div class="lt_go_cart">
+
+    <a href="cart.html" class="mui-pull-left">前往购物车</a>
+
+    <div class="mui-pull-right">
+      <button class="mui-btn mui-btn-danger" id="addCart">加入购物车</button>
+      <button class="mui-btn mui-btn-warning">买买买</button>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!--
+  <%= i %> 可以进行输出内容
+-->
+
+<script type="text/html" id="productTpl">
+  <!-- 轮播图 -->
+
+  <div class="mui-slider">
+
+    <!-- 图片区域 -->
+    <div class="mui-slider-group mui-slider-loop">
+      <!-- 添加假图, 最后一张图片 -->
+      <div class="mui-slider-item mui-slider-item-duplicate">
+        <a href="#"><img src="{{ pic[pic.length-1].picAddr }}" /></a>
+      </div>
+
+      {{ each pic v i }}
+        <div class="mui-slider-item"><a href="#"><img src="{{ v.picAddr }}" /></a></div>
+      {{ /each }}
+
+      <!-- 添加假图, 第一张图片 -->
+      <div class="mui-slider-item mui-slider-item-duplicate">
+        <a href="#"><img src="{{ pic[0].picAddr }}" /></a>
+      </div>
+    </div>
+
+    <!-- 小圆点结构 -->
+    <div class="mui-slider-indicator">
+      {{ each pic v i }}
+        <div class="mui-indicator {{ i === 0 ? 'mui-active' : '' }}"></div>
+      {{ /each }}
+    </div>
+
+  </div>
+
+  <!-- 产品标题 -->
+  <div class="lt_pro_name item_box">
+    <strong>{{ proName }}</strong>
+  </div>
+
+  <!-- 产品价格 -->
+  <div class="lt_price item_box">
+    价格:
+    <span class="price">¥{{ price }}</span>
+    <span class="oldPrice">¥{{ oldPrice }}</span>
+  </div>
+
+  <!-- 产品尺码 -->
+  <!-- 模板引擎: 原生语法, 在原生语法中可以直接编写 js 语句 -->
+  <div class="lt_size item_box">
+    尺码:
+    <%
+      var arr = size.split("-");  //  ["35", "45"]
+      var start = arr[0];   // 35
+      var end = arr[1];     // 45
+
+      for ( var i = start; i <= end; i++ ) {
+    %>
+      <span>{{ i }}</span>
+    <% } %>
+  </div>
+
+
+  <!-- 产品数量 -->
+  <div class="lt_num item_box">
+    数量:
+
+    <!-- 数字框 -->
+    <!-- data-numbox-min 配置可输入的最小值,
+         data-numbox-max 配置可输入的最大值
+         data-numbox-step 配置步长, 点击 +- 号修改的个数
+     -->
+    <div class="mui-numbox" data-numbox-min="1" data-numbox-max="{{ num }}" data-numbox-step='1'>
+      <!-- "-"按钮，点击可减小当前数值 -->
+      <button class="mui-btn mui-numbox-btn-minus" type="button">-</button>
+      <input class="mui-numbox-input" type="number" />
+      <!-- "+"按钮，点击可增大当前数值 -->
+      <button class="mui-btn mui-numbox-btn-plus" type="button">+</button>
+    </div>
+
+
+    <span>剩余数量: {{ num }}双 </span>
+
+  </div>
+
+
+  <!-- 详情描述 -->
+  <div class="lt_price item_box">
+    详情: {{ proDesc }}
+  </div>
+
+</script>
+
+
+
+
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/product.js"></script>
+</body>
+</html>

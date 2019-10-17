@@ -1,0 +1,186 @@
+html, body {
+  width: 100%;
+  height: 100%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+img {
+  display: block;
+  width: 100%;
+}
+
+/* 全屏容器 */
+.lt_container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  min-width: 320px;
+  max-width: 640px;
+  margin: 0 auto;
+  position: relative;
+  padding-top: 45px;
+  padding-bottom: 55px;
+}
+
+.lt_header {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 45px;
+  background-color: #006699;
+  padding-left: 45px;
+  padding-right: 45px;
+}
+
+.lt_header .icon_left,
+.lt_header .icon_right {
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  color: #fff;
+}
+.lt_header .icon_left {
+  left: 0;
+}
+.lt_header .icon_right {
+  right: 0;
+}
+
+.lt_header h3 {
+  height: 45px;
+  line-height: 45px;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin: 0;
+  font-weight: normal;
+}
+
+
+
+.lt_footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+  background-color: #006699;
+  overflow: hidden;
+}
+.lt_footer li {
+  float: left;
+  width: 25%;
+  text-align: center;
+}
+.lt_footer li a {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #fff;
+  padding-top: 8px;
+}
+.lt_footer li p {
+  color: #fff;
+  margin: 0;
+}
+
+.lt_footer li a.current {
+  color: orange;
+}
+.lt_footer li a.current p{
+  color: orange;
+}
+
+
+
+.lt_main {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+
+
+/* 公共的搜索框样式 */
+.lt_search {
+  padding: 10px;
+  position: relative;
+}
+.lt_search .search_input {
+  height: 34px;
+  font-size: 12px;
+  margin: 0;
+  border-radius: 5px;
+  border: 1px solid #007AFF;
+}
+.lt_search .search_btn {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 0 5px 5px 0;
+}
+
+
+
+/* 公共的商品样式 */
+.lt_product {
+  padding: 10px;
+}
+.lt_product_item {
+  border: 1px solid #ccc;
+  padding: 10px;
+  float: left;
+  width: 48%;
+  margin-bottom: 10px;
+  text-align: center;
+}
+.lt_product_item a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.lt_product_item:nth-child(2n+1) {
+  margin-right: 4%;
+}
+.lt_product_item .info {
+  text-align: left;
+  height: 40px;
+}
+.lt_product_item .price {
+  color: red;
+}
+.lt_product_item .oldPrice {
+  text-decoration: line-through;
+}
+
+.lt_product_item img {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+}
+
+
+
+/* 公共的尺码样式 */
+.lt_size span {
+  width: 25px;
+  height: 25px;
+  text-align: center;
+  line-height: 25px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  font-size: 12px;
+  margin: 3px 0;
+}
+.lt_size span.current {
+  background-color: orange;
+  color: #fff;
+}
