@@ -1,12 +1,117 @@
 body{
     background-color: #3c3c3c;
 }
+.bd-color{
+    background-color: ghostwhite;
+}
+a,
+a:link,
+a:visited,
+a:hover,
+a:active{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
 .mt-150{
     margin-top: 150px;
+}
+.mt-20{
+    margin-top: 20px;
 }
 .panel .panel-title{
     font-size: 22px;
     height: 40px;
     line-height: 40px;
     text-align: center;
+}
+
+/*侧边栏部分*/
+.lt-aside{
+    width:180px;
+    height: 100%;
+    background-color: #222D32;
+    position: fixed;
+    left: 0;
+    top:0;
+    z-index: 999;
+}
+.lt-aside .brand{
+    height: 50px;
+    line-height: 50px;
+    /*position: relative;*/
+    /*top:0;*/
+    /*left: 0;*/
+    width: 100%;
+    background-color: #367FA9;
+    text-align: center;
+}
+.lt-aside .brand a{
+    color: #fff;
+    font-size: 24px;
+}
+.lt-aside .user{
+    padding-top: 30px;
+    height: 180px;
+}
+.lt-aside .user img{
+    width:80px;
+    height: 80px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+.lt-aside .user p{
+    text-align: center;
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+}
+.lt-aside .nav a{
+    display: block;
+    height: 40px;
+    line-height: 40px;
+    width: 100%;
+    padding-left: 40px;
+    color: #fff;
+    border-left: 3px solid transparent;
+}
+.lt-aside .nav a.current{
+    background-color: #1D1F21;
+    border-left: 3px solid #069;
+}
+.lt-aside .nav .child a{
+    padding-left: 60px;
+}
+
+/*右侧主体部分*/
+.lt-main{
+    height: 1000px;
+    width: 100%;
+    padding-left: 180px;
+    background-color: pink;
+    padding-top: 50px;
+}
+.lt-main .lt-topbar{
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    background-color: #3C8DBC;
+    position: fixed;
+    left: 0;
+    top: 0;
+   padding-left: 180px;
+}
+.lt-main .lt-topbar a{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
 }
