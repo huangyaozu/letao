@@ -98,7 +98,7 @@ ul{
 .lt-main{
     height: 3000px;
     padding-left: 180px;
-    background-color: pink;
+    /*background-color: pink;*/
     padding-top: 50px;
     transition: all 1s;
 }
@@ -129,4 +129,12 @@ ul{
 }
 .red{
     color: red;
+}
+
+/*表格对齐*/
+
+.table.table-bordered th,
+.table.table-bordered td {
+    vertical-align: middle;
+    text-align: center;
 }

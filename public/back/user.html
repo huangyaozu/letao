@@ -49,11 +49,35 @@
     </div>
     <!--下面内容-->
     <div class="container-fluid mt-20" style="padding-left: 15px; padding-right: 15px">
+        <!--路径导航-->
         <ol class="breadcrumb">
             <li><a href="index.html">系统管理</a></li>
             <li class="active">用户管理</li>
         </ol>
+        <!--用户信息-->
+        <div class="lt_content">
+            <table class="table table-bordered table-hover">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>用户名</th>
+                    <th>手机号</th>
+                    <th>状态</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody>
+                <!--挖个坑-->
+                </tbody>
+            </table>
+
+            <!-- 准备分页结构, bootstrap3 要求是 ul -->
+            <div class="text-right">
+                <ul id="paginator" class="pull-right"></ul>
+            </div>
+        </div>
     </div>
+    <!-- 乐淘content -->
 </div>
 
 <!-- role  aria- 都是给盲人设备识别的, 可以直接删掉 -->
@@ -79,10 +103,60 @@
     </div><!-- /.modal-dialog -->
 </div><!-- /.modal -->
 
+<!--操作状态改变蒙层-->
+<div class="modal fade" tabindex="-1" id="myStatus">
+    <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span >&times;</span></button>
+                <h4 class="modal-title">温馨提示</h4>
+            </div>
+            <div class="modal-body">
+                <p class="red"><i class="glyphicon glyphicon-info-sign"></i> 你确定要执行此操作吗？</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary btn btn-primary" id="makeSureBtn">确定</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div><!-- /.modal -->
+<!--
+  使用模板引擎步骤
+  1. 引包
+  2. 准备结构(模板)
+  3. 准备数据
+  4. 将数据和模板相结合
+-->
+<script type="text/hmtl" id="tpl">
+{{ each rows v i }}
+     <tr>
+        <td>{{i + 1 + (page-1) * size }}</td>
+        <td>{{v.username}}</td>
+        <td>{{v.mobile}}</td>
+        <td>
+            {{v.isDelete === 1 ? '正常':'禁用'}}
+        </td>
+        <td data-id = "{{v.id}}">
+          <!--<button class="btn btn-danger"> {{v.isDelete === 1 ? '禁用':'启用'}}</button>-->
+        {{ if v.isDelete === 1 }}
+          <button class="btn btn-danger">禁用</button>
+        {{ /if }}
+        {{ if v.isDelete === 0 }}
+          <button class="btn btn-success">启用</button>
+        {{ /if }}
+      </td>
+        </td>
+    </tr>
+{{ /each }}
+</script>
+
 <script src="./lib/jquery/jquery.min.js"></script>
 <script src="./lib/bootstrap/js/bootstrap.min.js"></script>
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./lib/bootstrap-paginator/bootstrap-paginator.min.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/user.js"></script>
 </body>
