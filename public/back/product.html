@@ -10,52 +10,50 @@
 </head>
 <body class="bd-color">
 <!--左侧菜单栏-->
-    <div class="lt-aside">
-        <!--标题-->
-        <div class="brand">
-            <a href="#">欢迎乐淘淘</a>
-        </div>
-        <!--头像-->
-        <div class="user">
-            <img src="images/02.jpg" alt="">
-            <p>超级管理员</p>
-        </div>
-        <!--导航-->
-        <div class="nav">
-            <ul>
-                <li><a href="user.html"><i class="glyphicon glyphicon-user"></i> <span>用户管理</span></a></li>
-                <li>
-                    <a href="javascript:;" class="category"><i class="glyphicon glyphicon-list"></i> <span>分类管理</span></a>
-                    <div class="child" style="display: none" >
-                        <a href="first.html">一级分类</a>
-                        <a href="second.html">二级分类</a>
-                    </div>
-                </li>
-                <li><a href="product.html"><i class="glyphicon glyphicon-tags"></i> <span>商品管理</span></a></li>
-            </ul>
-        </div>
+<div class="lt-aside">
+    <!--标题-->
+    <div class="brand">
+        <a href="#">欢迎乐淘淘</a>
     </div>
+    <!--头像-->
+    <div class="user">
+        <img src="images/02.jpg" alt="">
+        <p>超级管理员</p>
+    </div>
+    <!--导航-->
+    <div class="nav">
+        <ul>
+            <li><a href="user.html"><i class="glyphicon glyphicon-user"></i> <span>用户管理</span></a></li>
+            <li>
+                <a href="javascript:;" class="category"><i class="glyphicon glyphicon-list"></i> <span>分类管理</span></a>
+                <div class="child" style="display: none" >
+                    <a href="first.html" >一级分类</a>
+                    <a href="second.html">二级分类</a>
+                </div</li>
+            <li><a href="product.html" class="current"><i class="glyphicon glyphicon-tags"></i> <span>商品管理</span></a></li>
+        </ul>
+    </div>
+</div>
 
 <!--右侧主体部分-->
-    <div class="lt-main">
-        <!--头部导航栏-->
-        <div class="lt-topbar">
-            <a href="#" class="pull-left icon_menu icon_btn">
-                <i class="glyphicon glyphicon-align-justify"></i>
-            </a>
-            <a href="#" class="pull-right icon_logout" data-toggle="modal" data-target="#myModal">
-                <i class="glyphicon glyphicon-log-out"></i>
-            </a>
-        </div>
-        <!--下面内容-->
-        <div class="container-fluid mt-20" style="padding-left: 15px; padding-right: 15px">
-            <ol class="breadcrumb">
-                <li><a href="index.html">系统管理</a></li>
-                <li class="active">首页</li>
-            </ol>
-        </div>
-
+<div class="lt-main">
+    <!--头部导航栏-->
+    <div class="lt-topbar">
+        <a href="#" class="pull-left icon_menu icon_btn">
+            <i class="glyphicon glyphicon-align-justify"></i>
+        </a>
+        <a href="#" class="pull-right icon_logout" data-toggle="modal" data-target="#myModal">
+            <i class="glyphicon glyphicon-log-out"></i>
+        </a>
     </div>
+    <!--下面内容-->
+    <div class="container-fluid mt-20" style="padding-left: 15px; padding-right: 15px">
+        <ol class="breadcrumb">
+            <li><a href="index.html">系统管理</a></li>
+            <li class="active">商品管理</li>
+        </ol>
+    </div>
+</div>
 
 <!-- role  aria- 都是给盲人设备识别的, 可以直接删掉 -->
 <!-- 添加了 data-dismiss="modal" 可以用于关闭模态框 -->
@@ -85,6 +83,6 @@
 <script src="./lib/bootstrap-validator/js/bootstrapValidator.min.js"></script>
 <script src="./lib/nprogress/nprogress.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/index.js"></script>
+
 </body>
 </html>

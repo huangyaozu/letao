@@ -39,7 +39,12 @@ ul{
     left: 0;
     top:0;
     z-index: 999;
+    transition: all 1s;
 }
+.lt-aside.hidemenu{
+    left: -180px;
+}
+
 .lt-aside .brand{
     height: 50px;
     line-height: 50px;
@@ -96,6 +101,10 @@ ul{
     padding-left: 180px;
     background-color: pink;
     padding-top: 50px;
+    transition: all 1s;
+}
+.lt-main.hidemenu{
+    padding-left: 0px;
 }
 .lt-main .lt-topbar{
     height: 50px;
@@ -105,7 +114,11 @@ ul{
     position: fixed;
     left: 0;
     top: 0;
-   padding-left: 180px;
+    padding-left: 180px;
+    transition: all 1s;
+}
+.lt-main .lt-topbar.hidemenu {
+    padding-left: 0px;
 }
 .lt-main .lt-topbar a{
     width: 50px;
@@ -114,4 +127,7 @@ ul{
     text-align: center;
     color: #fff;
     font-size: 20px;
+}
+.red{
+    color: red;
 }
