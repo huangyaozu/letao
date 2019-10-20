@@ -1,0 +1,10 @@
+/*
+* Create By huangyaozu 2019/10/20
+* */
+/*指定echarts容器的宽高*/
+.echarts_1,
+.echarts_2{
+    width: 48%;
+    height: 400px;
+    /*background-color: red;*/
+}
