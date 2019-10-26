@@ -1,0 +1,100 @@
+/*Created by huangyaozu 2019/10/25*/
+html,
+body{
+    width: 100%;
+    height: 100%;
+}
+*{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lt-cantainer{
+    position: relative;
+    margin: 0 auto;
+    max-width: 640px;
+    min-width: 320px;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+
+    /*防止内容覆盖*/
+    overflow: hidden;
+    padding-top: 45px;
+    padding-bottom: 55px;
+}
+.lt-header{
+    position: absolute;
+    left: 0;
+    top:0;
+    height: 45px;
+    width: 100%;
+    padding: 0 45px;
+    background-color: #006699;
+}
+.lt-header .icon-left,
+.lt-header .icon-right{
+    width: 45px;
+    height:45px;
+    line-height: 45px;
+    position: absolute;
+    top: 0;
+    text-align: center;
+    color: #fff;
+}
+.lt-header .icon-left{
+    left: 0;
+}
+.lt-header .icon-right{
+    right: 0;
+}
+.lt-header h3{
+    text-align: center;
+    height: 45px;
+    line-height: 45px;
+    font-size: 20px;
+    color: #fff;
+    font-weight: normal;
+    /*MUI中h标签默认会有margin-top：5px的值*/
+    margin: 0;
+}
+
+.lt-footer{
+    height: 55px;
+    width: 100%;
+    background-color: #069;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.lt-footer li{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+.lt-footer li a{
+    display: block;
+    color: #fff;
+    height: 55px;
+    padding-top: 8px;
+}
+.lt-footer li a p{
+    color: #fff;
+    margin: 0;
+}
+.lt-footer li a.current{
+    color: orange;
+}
+.lt-footer li a.current p{
+    color: orange;
+}
+
+.lt-main{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+
+
