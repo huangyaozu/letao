@@ -1,0 +1,44 @@
+/*Created by huangyaozu 2019/10/25*/
+.lt-category-left{
+    width: 90px;
+    height: 100%;
+    float: left;
+    position: relative;
+}
+.lt-category-left li a{
+    display: block;
+    width: 90px;
+    height:50px;
+    text-align: center;
+    line-height: 50px;
+    color: #666;
+
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    background-color: #E3E4E5;
+}
+.lt-category-left li a.current{
+    background-color: #fff;
+    border-right: none;
+}
+.lt-category-right{
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+    /*background-color: #2aabd2;*/
+}
+.lt-category-right li{
+    float: left;
+    width: 33.3%;
+}
+.lt-category-right li a{
+    display: block;
+}
+.lt-category-right li img{
+    width:70px;
+    height: 50px;
+    margin: 0 auto;
+}
+.lt-category-right li p{
+    text-align: center;
+}

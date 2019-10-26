@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<style>
+    .main{
+        width:200px;
+        height:200px;
+        background-color: skyblue;
+    }
+    .left{
+        width: 50px;
+        height: 100%;
+        float: left;
+        position:relative;
+        background-color: chartreuse;
+    }
+    .right{
+        background-color: red;
+        /*position: relative;*/
+        overflow: hidden;
+        /*width: 100%;*/
+        height: 100%;
+    }
+    .inner{
+        width: 80px;
+        height: 50px;
+        background-color: #2aabd2;
+        float: left;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="left"></div>
+        <div class="right">
+            <div class="inner"></div>
+        </div>
+    </div>
+</body>
+</html>
