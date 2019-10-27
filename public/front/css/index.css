@@ -14,30 +14,3 @@
     display: block;
     width: 100%;
 }
-/*产品部分*/
-.lt-product{
-    padding: 10px;
-}
-.lt_product_item{
-    border:1px solid #ccc;
-    padding:10px;
-    text-align: center;
-    width: 48%;
-    float: left;
-    margin-bottom: 10px;
-}
-.lt_product_item img{
-    display: block;
-    width: 150px;
-    height: 150px;
-    margin: 0 auto;
-}
-.lt_product_item:nth-child(2n+1){
-    margin-right: 4%;
-}
-.lt_product_item .price{
-    color: red;
-}
-.lt_product_item .oldPrice {
-    text-decoration: line-through;
-}

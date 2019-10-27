@@ -12,7 +12,7 @@
     <!-- 引入 font-awesome 字体图标库 -->
     <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/common.css">
-    <link rel="stylesheet" href="./css/search.css">
+    <link rel="stylesheet" href="./css/searchList.css">
 </head>
 <body>
 <div class="lt-cantainer">
@@ -33,11 +33,19 @@
                     <input type="text" placeholder="请输入关键词" class="search-input">
                     <button class="nui-btn mui-btn-primary search-btn">搜索</button>
                 </div>
-                <!--历史记录-->
-                <div class="lt-history">
-                   <!--挖个坑-->
+
+                <!--排序-->
+                <div class="lt-sort">
+                    <a href="#">上架时间<i class="fa fa-angle-down"></i></a>
+                    <a href="#" data-type="price">价格<i class="fa fa-angle-down"></i></a>
+                    <a href="#" data-type="num">库存<i class="fa fa-angle-down"></i></a>
+                    <a href="#">折扣<i class="fa fa-angle-down"></i></a>
                 </div>
 
+                <!--产品区域-->
+                <div class="lt-product">
+                        <!--挖个坑-->
+                </div>
             </div>
         </div>
     </div>
@@ -72,31 +80,28 @@
     </div>
 </div>
 
-<script type="text/html" id="historyTpl">
-
-    <div class="title">
-        <span class="mui-pull-left">搜索历史</span>
-        <span class="mui-pull-right btn-empty">
-            <i class="fa fa-trash"></i>
-            清空记录
-        </span>
-    </div>
-    {{each arr v i}}
-    <div class="content">
-        <ul>
-            <li>
-                <a href="#" class="mui-pull-left">{{v}}</a>
-                <i data-index="{{i}}" class="btn-del mui-pull-right mui-icon mui-icon-closeempty" ></i>
-            </li>
-        </ul>
-    </div>
+<script type="text/html" id="productTpl">
+    <ul>
+    {{each data v i}}
+        <li class="lt_product_item">
+            <a href="#">
+                <img src="{{v.pic[0].picAddr}}" alt="">
+                <p class="info mui-ellipsis-2">{{ v.proName }}</p>
+                <p>
+                    <span class="price">¥{{ v.price }}</span>
+                    <span class="oldPrice">¥{{ v.oldPrice }}</span>
+                </p>
+                <button class="mui-btn mui-btn-primary">立即购买</button>
+            </a>
+        </li>
     {{/each}}
+    </ul>
 </script>
 
 <script src="./lib/mui/js/mui.js"></script>
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/search.js"></script>
+<script src="./js/searchList.js"></script>
 </body>
 </html>
