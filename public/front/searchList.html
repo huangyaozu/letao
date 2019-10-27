@@ -84,7 +84,7 @@
     <ul>
     {{each data v i}}
         <li class="lt_product_item">
-            <a href="#">
+            <a href="product.html?productId={{ v.id }}" data-id="{{v.id}}">
                 <img src="{{v.pic[0].picAddr}}" alt="">
                 <p class="info mui-ellipsis-2">{{ v.proName }}</p>
                 <p>
@@ -102,6 +102,6 @@
 <script src="./lib/zepto/zepto.min.js"></script>
 <script src="./lib/artTemplate/template-web.js"></script>
 <script src="./js/common.js"></script>
-<script src="./js/searchList.js"></script>
+<script src="./js/searchList2.js"></script>
 </body>
 </html>

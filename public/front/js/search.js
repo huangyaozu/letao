@@ -106,10 +106,25 @@ $(function () {
         localStorage.setItem("search_list", JSON.stringify(arr));
         // 重新渲染
         render();
-        // 清空框框中国的记录
+        // 清空框框中的记录
         $('.search-input').val("");
         //添加跳转，跳转到产品列表展示页
         location.href = "searchList.html?key=" + key;
     })
 
+    // 功能5:点击历史中的文本，实现跳转到产品显示页面
+    $('.lt-history').on("click", "a", function () {
+        var key = $(this).html();
+        console.log(key);
+        // 获取本地历史记录
+        var arr = getHistory();
+        var index = arr.indexOf(key);
+        arr.splice(index,1);
+        // 将搜索记录添加到历史记录中
+        arr.unshift(key);
+        // 转存jsonStr，存储到本地中
+        localStorage.setItem("search_list", JSON.stringify(arr));
+        //添加跳转，跳转到产品列表展示页
+        location.href = "searchList.html?key=" + key;
+    });
 })
