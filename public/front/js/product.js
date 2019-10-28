@@ -25,7 +25,57 @@ $(function () {
             // 数字输入框初始化
             mui(".mui-numbox").numbox()
         }
-        
     })
+    
+    // 功能2:让尺码可以选中（通过事件委托注册）
+    $('.lt-main').on("click", '.lt-size span', function () {
+        $(this).addClass("current").siblings().removeClass("current");
+    });
 
+    // 功能3: 加入购物车功能
+    // (1) 添加点击事件
+    // (2) 收集尺码, 数量, 产品id, 发送 ajax请求
+    $("#addCart").click(function () {
+        // 获取尺码
+        var size = $(".lt-size span.current").text();
+        //获取数量
+        var num = $('.mui-numbox-input').val();
+        if(!size){
+            mui.toast("请选择尺码");
+            return;
+        }
+
+        // 发送ajax请求
+        $.ajax({
+            type:"post",
+            url:"/cart/addCart",
+            data: {
+                productId: productId,
+                num: num,
+                size: size
+            },
+            dataType:"json",
+            success:function (info) {
+                console.log(info);
+                // 加入购物车操作需要登陆
+
+                // (1) 未登录的情况
+                if(info.error === 400){
+                    // 跳转到登录页面
+                    location.href =  "login.html?retUrl=" + location.href;
+                }
+                // (2) 登录成功，提示用户
+                if(info.success){
+                    mui.confirm("添加成功", "温馨提示",["去购物车","继续浏览"] ,function (e) {
+                        if(e.index === 0){
+                            // 去购物车
+                            location.href = "cart.html";
+                        }
+                    });
+                }
+            }
+        })
+
+    })
+// 清空浏览器退出登录状态: 清空了cookie中的数据, 就相当于清空了浏览器端的 sessionId
 })

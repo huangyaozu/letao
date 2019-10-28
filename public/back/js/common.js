@@ -38,7 +38,7 @@ if(location.href.indexOf("login.html") === -1){
                 console.log("已登录");
             }
             if(info.error === 400){
-                location.href = "login.html";
+                location.href = "../../front/login.html";
             }
         }
     });
@@ -73,7 +73,7 @@ $(function () {
             success:function (info) {
                 console.log(info);
                 if(info.success){
-                    location.href = "login.html";
+                    location.href = "../../front/login.html";
                 }
             }
         })

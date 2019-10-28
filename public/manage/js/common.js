@@ -46,7 +46,7 @@ if ( location.href.indexOf("login.html") === -1 ) {
 
       if ( info.error === 400 ) {
         // 进行拦截, 拦截到登录页
-        location.href = "login.html";
+        location.href = "../../front/login.html";
       }
     }
   })
@@ -86,7 +86,7 @@ $(function() {
        success: function( info ) {
 
          if ( info.success ) {
-           location.href = "login.html"
+           location.href = "../../front/login.html"
          }
        }
      })

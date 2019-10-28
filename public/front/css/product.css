@@ -21,6 +21,9 @@
     font-size: 12px;
     margin:3px 0;
 }
+.lt-size span.current{
+    background-color: orange;
+}
 .lt-num span{
     font-size: 12px;
     color: #666;

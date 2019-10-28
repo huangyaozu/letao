@@ -13,7 +13,7 @@ $(function() {
       console.log( info );
       if ( info.error === 400 ) {
         // 未登录
-        location.href = "login.html";
+        location.href = "../../front/login.html";
         return;
       }
 
@@ -41,7 +41,7 @@ $(function() {
         console.log( info );
         if ( info.success ) {
           // 退出成功, 跳转到登录页
-          location.href = "login.html";
+          location.href = "../../front/login.html";
         }
       }
     })

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!-- 视口: 存在目的, 早期手机屏幕很小, 为了能够查看 pc 网页
+            默认宽度 980px, 可以进行缩放,
+  -->
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>乐淘商城</title>
+    <link rel="icon" href="./images/favicon.ico" type="image/x-icon"/>
+    <link rel="stylesheet" href="./lib/mui/css/mui.css">
+    <!-- 引入 font-awesome 字体图标库 -->
+    <link rel="stylesheet" href="./lib/fa/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/common.css">
+    <link rel="stylesheet" href="./css/cart.css">
+</head>
+<body>
+<div class="lt-cantainer">
+    <!--乐淘头部-->
+    <div class="lt-header">
+        <a href="javascript:history.back();" class="icon-left"><i class="mui-icon mui-icon-back"></i></a>
+        <h3>购物车</h3>
+
+    </div>
+    <!--乐淘主体内容-->
+    <div class="lt-main">
+        <!--添加MUI区域滚动组件-->
+        <div class="mui-scroll-wrapper">
+            <div class="mui-scroll">
+                <!--这里放置真实显示的DOM内容-->
+
+            </div>
+        </div>
+    </div>
+    <!--乐淘尾部-->
+    <div class="lt-footer">
+        <ul>
+            <li>
+                <a href="index.html">
+                    <i class="fa fa-home"></i>
+                    <p>首页</p>
+                </a>
+            </li>
+            <li>
+                <a href="category.html">
+                    <i class="fa fa-bars"></i>
+                    <p>分类</p>
+                </a>
+            </li>
+            <li>
+                <a href="cart.html" class="current">
+                    <i class="fa fa-shopping-cart"></i>
+                    <p>购物车</p>
+                </a>
+            </li>
+            <li>
+                <a href="user.html">
+                    <i class="fa fa-user"></i>
+                    <p>用户中心</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script type="text/html" id="cartTpl">
+
+</script>
+
+<script src="./lib/mui/js/mui.js"></script>
+<script src="./lib/zepto/zepto.min.js"></script>
+<script src="./lib/artTemplate/template-web.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/cart.js"></script>
+</body>
+</html>
