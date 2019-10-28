@@ -77,7 +77,7 @@ $(function () {
                         //      要使用原型上的 endPulldownToRefresh 方法来结束 下拉刷新
                         mui('.mui-scroll-wrapper').pullRefresh().endPulldownToRefresh();
 
-                        //第一页数据被重新加载之后，又有数据可以进行上拉加载，需要启动上拉加载？
+                        //第一页数据被重新加载之后，又有数据可以进行上拉加载，需要启动上拉加载
                         mui(".mui-scroll-wrapper").pullRefresh().enablePullupToRefresh();
                     });
                 }
