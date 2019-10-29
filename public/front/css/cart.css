@@ -1,0 +1,54 @@
+.lt-main .cart-item{
+    height:110px;
+}
+
+.lt-main .cart-img{
+    float: left;
+    width: 60px;
+    height:90px;
+}
+.cart-img img{
+    width: 60px;
+    height: 60px;
+    display: block;
+}
+.lt-main .cart-info{
+    overflow: hidden;
+    height: 90px;
+    padding: 0 10px;
+}
+.lt-main .cart-info .pro-name{
+    color: #000;
+}
+.lt-main .cart-info .price{
+    color: red;
+}
+.lt-main .cart-info .oldPrice{
+    text-decoration: line-through;
+}
+.lt-main .mui-table-cell{
+    /*改变默认样式display:table-cell;*/
+    display: block;
+}
+.lt-size{
+    text-align: left;
+}
+/* 公用的尺码样式 */
+.lt-size span {
+    width: 25px;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+    border: 1px solid #ccc;
+    display: inline-block;
+    font-size: 12px;
+    margin: 3px 0;
+}
+.lt-size span.current {
+    background-color: orange;
+    color: #fff;
+}
+
+.lt-num {
+    text-align: left;
+}
